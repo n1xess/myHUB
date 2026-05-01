@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 7%;
+    --foreground: 210 20% 90%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 72 100% 50%;
+    --primary-foreground: 220 20% 7%;
+
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 210 20% 80%;
+
+    --muted: 220 14% 14%;
+    --muted-foreground: 215 12% 50%;
+
+    --accent: 72 80% 45%;
+    --accent-foreground: 220 20% 7%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 72 100% 50%;
+
+    --radius: 0.75rem;
+
+    --chart-green: 142 71% 45%;
+    --chart-red: 0 72% 51%;
+    --chart-blue: 217 91% 60%;
+    --chart-orange: 25 95% 53%;
+
+    --sidebar-background: 220 20% 5%;
+    --sidebar-foreground: 210 20% 70%;
+    --sidebar-primary: 72 100% 50%;
+    --sidebar-primary-foreground: 220 20% 7%;
+    --sidebar-accent: 220 16% 12%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 14% 14%;
+    --sidebar-ring: 72 100% 50%;
+
+    --font-heading: 'JetBrains Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(72 100% 50% / 0.15);
+  }
+  .text-profit {
+    color: hsl(var(--chart-green));
+  }
+  .text-loss {
+    color: hsl(var(--chart-red));
+  }
+  .bg-profit {
+    background-color: hsl(var(--chart-green) / 0.15);
+  }
+  .bg-loss {
+    background-color: hsl(var(--chart-red) / 0.15);
+  }
+}
