@@ -1,0 +1,1 @@
+const n=t("");function s(r){const i=r.startsWith("/")?r:`/${r}`;return`${n}/api${i}`}function t(r){const i=(r==null?void 0:r.trim().replace(/\/+$/,""))??"";return i.endsWith("/api")?i.slice(0,-4):i}export{s as a};
